@@ -12,7 +12,7 @@ Usage
 ------
 
 ```
-$ docker run -d -P bylexus/apache-php
+$ docker run -d -P bylexus/apache-php53
 ```
 
 With all the options:
@@ -20,7 +20,8 @@ With all the options:
 ```bash
 $ docker run -d -p 8080:80 \
     -v /home/user/webroot:/var/www \
-    -e PHP_ERROR_REPORTING='E_ALL & ~E_STRICT'
+    -e PHP_ERROR_REPORTING='E_ALL & ~E_STRICT' \
+    bylexus/apache-php53
 ```
 
 * `-v [local path]:/var/www` maps the container's webroot to a local path
